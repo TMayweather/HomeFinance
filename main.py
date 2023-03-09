@@ -1,19 +1,10 @@
 import pandas as pd
-import SendMessage as sm
-
-# sm.send_message()
 
 joint = pd.read_csv('/home/tmayweather/finance/jointjanfeb23.csv')
 main = pd.read_csv('/home/tmayweather/finance/mainjanfeb23.csv')
 df = pd.concat([joint, main], axis=0)
 df.to_csv('fin.csv', index=False)
-read_file = pd.read_excel('cc.xlsx')
-print(df)
-read_file.to_csv('cc.csv',
-                 index=False,
-                 header=True)
-cc = pd.DataFrame(pd.read_csv('cc.csv', index_col=0))
-print(cc)
+
 
 start_date = ''
 end_date = ''
